@@ -1,5 +1,8 @@
 mod guess_number;
 mod ownership_with_slices;
+mod using_structs;
+
+use using_structs::Rectangle;
 
 struct User {
     active: bool,
@@ -9,17 +12,10 @@ struct User {
 }
 
 fn main() {
-    let user1 = User {
-        email: String::from("someone@example.com"),
-        username: String::from("someusername123"),
-        active: true,
-        sign_in_count: 1,
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
     };
 
-    let user2 = User {
-        email: String::from("another@example.com"),
-        ..user1
-    };
-
-    println!("user is : {}", user2.username);
+    println!("The area of the rectangle is {}", rect1.area())
 }
