@@ -16,7 +16,7 @@ impl Message {
     fn call(&self) {}
 }
 
-enum Coin {
+pub enum Coin {
     Penny,
     Nickel,
     Dime,
@@ -32,8 +32,17 @@ fn value_in_cents(coin: Coin) -> u8 {
     }
 }
 
+impl UsState {
+    fn exsisted_in(&self, year: u16) -> bool {
+        match self {
+            UsState::Alabama => year >= 1819,
+            UsState::Alaska => year >= 1959,
+        }
+    }
+}
+
 #[derive(Debug)]
-enum UsState {
+pub enum UsState {
     Alabama,
     Alaska,
 }
