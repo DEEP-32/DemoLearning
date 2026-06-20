@@ -1,3 +1,4 @@
+mod enum_learning;
 mod guess_number;
 mod ownership_with_slices;
 mod using_structs;
