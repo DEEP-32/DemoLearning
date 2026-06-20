@@ -2,9 +2,8 @@ mod enum_learning;
 mod guess_number;
 mod ownership_with_slices;
 mod using_structs;
-use using_structs::Rectangle;
-
 use enum_learning::Coin::{self, Quater};
+use using_structs::Rectangle;
 
 struct User {
     active: bool,
