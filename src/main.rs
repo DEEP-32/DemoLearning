@@ -1,25 +1,37 @@
+use crate::using_traits::{SocialPost, Summary};
+
 // mod enum_learning;
 // mod guess_number;
-// mod ownership_with_slices;
+//mod ownership_with_slices;
 // mod using_structs;
 // use enum_learning::Coin::{self, Quater};
 // use using_structs::Rectangle;
+mod using_traits;
+
+fn largest<T: std::cmp::PartialOrd>(list: &[T]) -> &T {
+    let mut largest = &list[0];
+
+    for item in list {
+        if item > largest {
+            largest = item;
+        }
+    }
+
+    return largest;
+}
+
+struct Point<T> {
+    x: T,
+    y: T,
+}
 
 fn main() {
-    // let rect1 = Rectangle {
-    //     width: 30,
-    //     height: 50,
-    // };
+    let post = SocialPost {
+        username: String::from("horse_ebooks"),
+        content: String::from("of course  as you probably already know people"),
+        reply: false,
+        repost: false,
+    };
 
-    // println!("The area of the rectangle is {}", rect1.area());
-
-    // let current_quater = Quater(enum_learning::UsState::Alaska);
-
-    // if let Coin::Quater(state) = current_quater {
-    //     println!("State quater is from {state:?}!")
-    // } else {
-    // }
-
-    //using collection
-    let v: Vec<i32> = Vec::new();
+    println!("new post {}", post.summarize());
 }
