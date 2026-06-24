@@ -6,9 +6,14 @@ version = 4
 name = "DemoLearning"
 version = "0.1.0"
 dependencies = [
+ "adder",
  "rand",
  "restranrant",
 ]
+
+[[package]]
+name = "adder"
+version = "0.1.0"
 
 [[package]]
 name = "cfg-if"

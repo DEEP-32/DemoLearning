@@ -1,4 +1,5 @@
 use crate::using_traits::{SocialPost, Summary};
+use adder::add;
 
 // mod enum_learning;
 // mod guess_number;
